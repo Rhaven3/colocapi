@@ -1,9 +1,15 @@
-﻿import express, { type Express, type Request, type Response } from 'express';
+﻿import express, {type Express} from 'express';
+import roommateController from "./routes/roommates.ts";
+import productController from "./routes/products.ts";
+import taskController from "./routes/tasks.ts";
+import reminderController from "./routes/reminders.ts";
 
 const app: Express = express();
+app.use(express.json());
 
-app.get('/', (req: Request, res: Response) => {
-    res.send('Hello World!');
-});
+app.use('/api/roommates', roommateController);
+app.use('/api/products', productController);
+app.use('/api/tasks', taskController);
+app.use('/api/reminders', reminderController);
 
-app.listen(3000);
+export default app;

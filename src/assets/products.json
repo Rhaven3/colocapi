@@ -1,0 +1,92 @@
+[
+  {
+    "id": "pq",
+    "nom": "Papier toilette",
+    "quantite": 3,
+    "unite": "rouleaux",
+    "seuil": 4,
+    "prix": 8.9,
+    "dernierAcheteur": 2
+  },
+  {
+    "id": "sacs",
+    "nom": "Sacs poubelle",
+    "quantite": 12,
+    "unite": "sacs",
+    "seuil": 6,
+    "prix": 4.5,
+    "dernierAcheteur": 1
+  },
+  {
+    "id": "vaisselle",
+    "nom": "Produit vaisselle",
+    "quantite": 1,
+    "unite": "flacon",
+    "seuil": 2,
+    "prix": 3.4,
+    "dernierAcheteur": 3
+  },
+  {
+    "id": "eponge",
+    "nom": "Éponges",
+    "quantite": 5,
+    "unite": "unités",
+    "seuil": 3,
+    "prix": 1.8,
+    "dernierAcheteur": 4
+  },
+  {
+    "id": "desodorisant",
+    "nom": "Désodorisant toilette",
+    "quantite": 2,
+    "unite": "unités",
+    "seuil": 2,
+    "prix": 2.9,
+    "dernierAcheteur": 1
+  },
+  {
+    "id": "savon",
+    "nom": "Savon évier salle de bain",
+    "quantite": 1,
+    "unite": "flacon",
+    "seuil": 2,
+    "prix": 2.2,
+    "dernierAcheteur": 2
+  },
+  {
+    "id": "sopalin",
+    "nom": "Sopalin",
+    "quantite": 4,
+    "unite": "rouleaux",
+    "seuil": 2,
+    "prix": 3.1,
+    "dernierAcheteur": 3
+  },
+  {
+    "id": "film-plastique",
+    "nom": "Film plastique",
+    "quantite": 0,
+    "unite": "rouleau",
+    "seuil": 1,
+    "prix": 2.4,
+    "dernierAcheteur": 4
+  },
+  {
+    "id": "film-cuisson",
+    "nom": "Film cuisson",
+    "quantite": 0,
+    "unite": "rouleau",
+    "seuil": 1,
+    "prix": 2.6,
+    "dernierAcheteur": 2
+  },
+  {
+    "id": "film-alu",
+    "nom": "Film aluminium",
+    "quantite": 1,
+    "unite": "rouleau",
+    "seuil": 1,
+    "prix": 2.1,
+    "dernierAcheteur": 1
+  }
+]
