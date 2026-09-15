@@ -4,7 +4,7 @@ import type {Task} from "../../types/task.ts";
 import path from "node:path";
 
 export function assignedAndResetTask(id: number): any {
-    const filePath = path.join(process.cwd(), 'src', 'assets','tasks.json');
+    const filePath = path.join(process.cwd(), 'src', 'assets', 'tasks.json');
     const tasks = getDataJson<Task[]>("tasks");
     const targetTask = tasks.find((task) => task.id === id);
     if (!targetTask?.done) {
@@ -18,7 +18,7 @@ export function assignedAndResetTask(id: number): any {
             return {
                 ...task,
                 done: false,
-                roommateAssigned: (((task.roommateAssigned ?? -1) + 1) % roommates.length) +1,
+                roommateAssigned: (((task.roommateAssigned ?? -1) + 1) % roommates.length) + 1,
             }
         }
         return task

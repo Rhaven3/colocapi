@@ -1,92 +1,92 @@
 [
   {
     "id": "pq",
-    "nom": "Papier toilette",
-    "quantite": 3,
+    "name": "Papier toilette",
+    "quantity": 3,
     "unite": "rouleaux",
-    "seuil": 4,
-    "prix": 8.9,
-    "dernierAcheteur": 2
+    "treshold": 4,
+    "price": 8.9,
+    "buyer": 2
   },
   {
     "id": "sacs",
-    "nom": "Sacs poubelle",
-    "quantite": 12,
+    "name": "Sacs poubelle",
+    "quantity": 12,
     "unite": "sacs",
-    "seuil": 6,
-    "prix": 4.5,
-    "dernierAcheteur": 1
+    "treshold": 6,
+    "price": 4.5,
+    "buyer": 1
   },
   {
     "id": "vaisselle",
-    "nom": "Produit vaisselle",
-    "quantite": 1,
+    "name": "Produit vaisselle",
+    "quantity": 1,
     "unite": "flacon",
-    "seuil": 2,
-    "prix": 3.4,
-    "dernierAcheteur": 3
+    "treshold": 2,
+    "price": 3.4,
+    "buyer": 3
   },
   {
     "id": "eponge",
-    "nom": "Éponges",
-    "quantite": 5,
+    "name": "Éponges",
+    "quantity": 5,
     "unite": "unités",
-    "seuil": 3,
-    "prix": 1.8,
-    "dernierAcheteur": 4
+    "treshold": 3,
+    "price": 1.8,
+    "buyer": 4
   },
   {
     "id": "desodorisant",
-    "nom": "Désodorisant toilette",
-    "quantite": 2,
+    "name": "Désodorisant toilette",
+    "quantity": 2,
     "unite": "unités",
-    "seuil": 2,
-    "prix": 2.9,
-    "dernierAcheteur": 1
+    "treshold": 2,
+    "price": 2.9,
+    "buyer": 1
   },
   {
     "id": "savon",
-    "nom": "Savon évier salle de bain",
-    "quantite": 1,
+    "name": "Savon évier salle de bain",
+    "quantity": 1,
     "unite": "flacon",
-    "seuil": 2,
-    "prix": 2.2,
-    "dernierAcheteur": 2
+    "treshold": 2,
+    "price": 2.2,
+    "buyer": 2
   },
   {
     "id": "sopalin",
-    "nom": "Sopalin",
-    "quantite": 4,
+    "name": "Sopalin",
+    "quantity": 4,
     "unite": "rouleaux",
-    "seuil": 2,
-    "prix": 3.1,
-    "dernierAcheteur": 3
+    "treshold": 2,
+    "price": 3.1,
+    "buyer": 3
   },
   {
     "id": "film-plastique",
-    "nom": "Film plastique",
-    "quantite": 0,
+    "name": "Film plastique",
+    "quantity": 0,
     "unite": "rouleau",
-    "seuil": 1,
-    "prix": 2.4,
-    "dernierAcheteur": 4
+    "treshold": 1,
+    "price": 2.4,
+    "buyer": 4
   },
   {
     "id": "film-cuisson",
-    "nom": "Film cuisson",
-    "quantite": 0,
+    "name": "Film cuisson",
+    "quantity": 0,
     "unite": "rouleau",
-    "seuil": 1,
-    "prix": 2.6,
-    "dernierAcheteur": 2
+    "treshold": 1,
+    "price": 2.6,
+    "buyer": 2
   },
   {
     "id": "film-alu",
-    "nom": "Film aluminium",
-    "quantite": 1,
+    "name": "Film aluminium",
+    "quantity": 1,
     "unite": "rouleau",
-    "seuil": 1,
-    "prix": 2.1,
-    "dernierAcheteur": 1
+    "treshold": 1,
+    "price": 2.1,
+    "buyer": 1
   }
 ]

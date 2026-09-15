@@ -1,5 +1,4 @@
 ﻿import express, {type Express, type Request, type Response, type Router} from 'express';
-import * as fs from "node:fs";
 import * as path from "node:path";
 import type {Task} from "../types/task.ts";
 import {getDataJson, updateDataJson} from "../utils/json.ts";
