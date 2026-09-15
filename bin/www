@@ -2,6 +2,7 @@
 import app from "../src/index.ts";
 import * as http from "node:http";
 import {debug} from "node:util";
+import "../src/cron/scheduler.ts"
 
 /**
  * Module dependencies.

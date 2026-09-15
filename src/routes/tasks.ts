@@ -15,7 +15,8 @@ taskController.get('/', (req: Request, res: Response) => {
 
 taskController.patch('/:id/toggle', (req: Request, res: Response) => {
     const updatedTask = updateDataJson<Task>(filePath, (task) => {
-        if (task.id === req.params.id) {
+        const id = req.params.id as string;
+        if (task.id === parseInt(id)) {
             return {
                 ...task,
                 done: !task.done,
