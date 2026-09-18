@@ -1,10 +1,9 @@
-﻿import type {Task} from "../types/task.ts";
-import * as fs from "node:fs";
+﻿import * as fs from "node:fs";
 import path from "node:path";
 
-export function updateDataJson<T>(filePath:string, mapCallback:(obj:T) =>T) {
+export function updateDataJson<T>(filePath: string, mapCallback: (obj: T) => T) {
     const raw = fs.readFileSync(filePath, 'utf-8');
-    const objs:T[] = JSON.parse(raw);
+    const objs: T[] = JSON.parse(raw);
 
     const updatedObjs = objs.map(mapCallback)
 
@@ -12,8 +11,19 @@ export function updateDataJson<T>(filePath:string, mapCallback:(obj:T) =>T) {
     return updatedObjs
 }
 
-export function getDataJson<T>(data:string):T {
-    const filePath = path.join(process.cwd(), 'src', 'assets',`${data}.json`);
+export function getDataJson<T>(data: string): T {
+    const filePath = path.join(process.cwd(), 'src', 'assets', `${data}.json`);
     const raw = fs.readFileSync(filePath, 'utf-8');
     return JSON.parse(raw);
+}
+
+export function appendDataJson<T>(data: string, obj: T) {
+    const filePath = path.join(process.cwd(), 'src', 'assets', `${data}.json`);
+    const raw = fs.readFileSync(filePath, 'utf-8');
+    const objs: T[] = JSON.parse(raw);
+
+    objs.push(obj);
+
+    fs.writeFileSync(filePath, JSON.stringify(objs), "utf-8");
+    return objs;
 }

@@ -1,10 +1,22 @@
 ﻿
-export type Product = {
-    id: string;
+export type ProductCategory = {
+    id: number;
     name: string;
-    quantity: number;
     unite: string;
     treshold: number;
+}
+
+export type Product = {
+    id: number;
+    quantity: number;
     price: number;
+    category: number
     buyer: number;
 };
+
+export type ProductDTO = {
+    quantity: number;
+    price: number;
+    category: number;
+    buyer: number;
+}
