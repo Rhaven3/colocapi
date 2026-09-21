@@ -20,3 +20,7 @@ export type ProductDTO = {
     category: number;
     buyer: number;
 }
+
+export type PatchQuantityProductValue = {
+    soustraction: number;
+}
