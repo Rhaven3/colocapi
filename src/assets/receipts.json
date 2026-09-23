@@ -1,0 +1,86 @@
+[
+  {
+    "productId": 1,
+    "roommateId": 2,
+    "price": 8.9,
+    "date": "2026-09-23"
+  },
+  {
+    "productId": 11,
+    "roommateId": 1,
+    "price": 12.99,
+    "date": "2026-09-23"
+  },
+  {
+    "productId": 2,
+    "roommateId": 1,
+    "price": 4.5,
+    "date": "2026-09-23"
+  },
+  {
+    "productId": 3,
+    "roommateId": 1,
+    "price": 3.4,
+    "date": "2026-09-23"
+  },
+  {
+    "productId": 4,
+    "roommateId": 2,
+    "price": 1.8,
+    "date": "2026-09-23"
+  },
+  {
+    "productId": 5,
+    "roommateId": 1,
+    "price": 2.9,
+    "date": "2026-09-23"
+  },
+  {
+    "productId": 6,
+    "roommateId": 2,
+    "price": 2.2,
+    "date": "2026-09-23"
+  },
+  {
+    "productId": 7,
+    "roommateId": 1,
+    "price": 3.1,
+    "date": "2026-09-23"
+  },
+  {
+    "productId": 8,
+    "roommateId": 2,
+    "price": 2.4,
+    "date": "2026-09-23"
+  },
+  {
+    "productId": 9,
+    "roommateId": 2,
+    "price": 2.6,
+    "date": "2026-09-23"
+  },
+  {
+    "productId": 10,
+    "roommateId": 1,
+    "price": 2.1,
+    "date": "2026-09-23"
+  },
+  {
+    "productId": 12,
+    "roommateId": 2,
+    "price": 6,
+    "date": "2026-09-23"
+  },
+  {
+    "productId": 13,
+    "roommateId": 1,
+    "price": 5.05,
+    "date": "2026-09-23"
+  },
+  {
+    "productId": 14,
+    "roommateId": 2,
+    "price": 10,
+    "date": "2026-09-23"
+  }
+]

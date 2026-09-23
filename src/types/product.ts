@@ -9,7 +9,6 @@ export type ProductCategory = {
 export type Product = {
     id: number;
     quantity: number;
-    price: number;
     category: number
     buyer: number;
 };

@@ -4,7 +4,6 @@ import * as path from "node:path";
 
 const app: Express = express()
 const reminderController: Router = app.router
-
 const filePath = path.join(process.cwd(), 'src', 'assets','reminders.json');
 
 reminderController.get('/', (req: Request, res: Response) => {

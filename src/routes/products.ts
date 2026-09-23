@@ -1,6 +1,7 @@
 import express, {type Express, type Request, type Response, type Router} from 'express';
 import {appendDataJson, getDataJson, updateDataJson} from "../utils/json.ts";
 import type {PatchQuantityProductValue, Product, ProductCategory, ProductDTO} from "../types/product.ts";
+import type {Receipt} from "../types/Receipt.ts";
 
 const app: Express = express()
 const productController: Router = app.router
@@ -31,7 +32,6 @@ productController.patch(`/:id`, (req: Request, res: Response) => {
     const id = req.params.id as string;
     const productCategory = getDataJson<ProductCategory[]>(entity).filter((pc) => pc.id === parseInt(id))[0]
     const products = getDataJson<Product[]>(entity).filter((p) => p.category === parseInt(id))
-    const deletedProducts: Product[] = []
 
     for (const product of products) {
         const tmpQuantity = product.quantity
@@ -40,18 +40,17 @@ productController.patch(`/:id`, (req: Request, res: Response) => {
 
         if (product.quantity >= 0) break;
         product.quantity = 0
-        deletedProducts.push(product)
     }
 
-    // const updatedProducts = updateDataJson<Product>(entity, (product) => {
-    //     if (product.id === parseInt(id)) {
-    //         return {
-    //             ...product,
-    //             quantity: patchValue.quantity
-    //         }
-    //     }
-    //     return product;
-    // })
+    const updatedProducts = updateDataJson<Product>(entity, (product, index) => {
+        if (product.id === products[index].id) {
+            return {
+                ...product,
+                quantity: products[index].quantity
+            }
+        }
+        return product;
+    }, (product) => product.quantity > 0)
 
     res.status(200).send(updatedProducts);
 })
