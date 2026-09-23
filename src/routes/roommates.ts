@@ -6,11 +6,11 @@ import type {Roommate} from "../types/roommate.ts";
 
 const app: Express = express()
 const roommateController: Router = app.router
+const entity = "roommates"
 
-const filePath = path.join(process.cwd(), 'src', 'assets','roommates.json');
 
 roommateController.get('/', (req: Request, res: Response) => {
-    res.status(200).send(getDataJson<Roommate[]>("roommates"));
+    res.status(200).send(getDataJson<Roommate[]>(entity));
 });
 
 export default roommateController

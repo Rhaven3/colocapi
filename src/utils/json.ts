@@ -1,13 +1,14 @@
 ﻿import * as fs from "node:fs";
 import path from "node:path";
 
-export function updateDataJson<T>(filePath: string, mapCallback: (obj: T, index: number) => T, filterCallback?: (obj: T, index: number) => boolean) {
+export function updateDataJson<T>(data: string, mapCallback: (obj: T, index: number) => T, filterCallback?: (obj: T, index: number) => boolean) {
+    const filePath = path.join(process.cwd(), 'src', 'assets', `${data}.json`);
     const raw = fs.readFileSync(filePath, 'utf-8');
     const objs: T[] = JSON.parse(raw);
 
-    const updatedObjs = objs.map(mapCallback)
+    let updatedObjs = objs.map(mapCallback)
     if (filterCallback) {
-        updatedObjs.filter(filterCallback)
+        updatedObjs = updatedObjs.filter(filterCallback)
     }
 
     fs.writeFileSync(filePath, JSON.stringify(updatedObjs), "utf-8");

@@ -5,15 +5,15 @@ import {getDataJson, updateDataJson} from "../utils/json.ts";
 
 const app: Express = express()
 const taskController: Router = app.router
+const entity = "tasks"
 
-const filePath = path.join(process.cwd(), 'src', 'assets','tasks.json');
 
 taskController.get('/', (req: Request, res: Response) => {
-    res.status(200).send(getDataJson<Task[]>("tasks"));
+    res.status(200).send(getDataJson<Task[]>(entity));
 });
 
 taskController.patch('/:id/toggle', (req: Request, res: Response) => {
-    const updatedTask = updateDataJson<Task>(filePath, (task) => {
+    const updatedTask = updateDataJson<Task>(entity, (task) => {
         const id = req.params.id as string;
         if (task.id === parseInt(id)) {
             return {

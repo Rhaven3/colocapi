@@ -30,7 +30,6 @@ productController.post('/', (req: Request, res: Response) => {
 productController.patch(`/:id`, (req: Request, res: Response) => {
     const patchValue = req.body as PatchQuantityProductValue;
     const id = req.params.id as string;
-    const productCategory = getDataJson<ProductCategory[]>(entity).filter((pc) => pc.id === parseInt(id))[0]
     const products = getDataJson<Product[]>(entity).filter((p) => p.category === parseInt(id))
 
     for (const product of products) {
@@ -43,10 +42,11 @@ productController.patch(`/:id`, (req: Request, res: Response) => {
     }
 
     const updatedProducts = updateDataJson<Product>(entity, (product, index) => {
-        if (product.id === products[index].id) {
+        const modifiedProduct = products.find((p) => p.id === product.id)
+        if (modifiedProduct) {
             return {
                 ...product,
-                quantity: products[index].quantity
+                quantity: modifiedProduct.quantity
             }
         }
         return product;

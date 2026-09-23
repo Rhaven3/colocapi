@@ -5,11 +5,11 @@ import type {ProductCategory} from "../types/product.ts";
 
 const app: Express = express()
 const productCategoryController: Router = app.router
+const entity = "product-categories"
 
-const filePath = path.join(process.cwd(), 'src', 'assets', 'product-categories.json');
 
 productCategoryController.get('/', (req: Request, res: Response) => {
-    res.status(200).send(getDataJson<ProductCategory[]>("product-categories"));
+    res.status(200).send(getDataJson<ProductCategory[]>(entity));
 });
 
 export default productCategoryController
