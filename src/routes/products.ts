@@ -18,11 +18,20 @@ productController.post('/', (req: Request, res: Response) => {
     let products = getDataJson<Product[]>(entity);
     const productDto = req.body as ProductDTO;
     const newProduct: Product = {
-        ...productDto,
-        id: products.length + 1,
+        id: crypto.randomUUID(),
+        quantity: productDto.quantity,
+        category: productDto.category,
+        buyer: productDto.buyer,
+    }
+    const newReceipt: Receipt = {
+        productId: newProduct.id,
+        roommateId: productDto.buyer,
+        price: productDto.price,
+        date: new Date().toISOString(),
     }
 
     products = appendDataJson<Product>(entity, newProduct);
+    appendDataJson<Receipt>("receipts", newReceipt);
     res.status(201).send(products);
 })
 
