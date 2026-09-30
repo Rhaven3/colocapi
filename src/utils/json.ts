@@ -1,8 +1,13 @@
 ﻿import * as fs from "node:fs";
 import path from "node:path";
 
+function getDataFilePath(data: string): string {
+    const dataDirectory = process.env.DATA_DIR || path.join(process.cwd(), "src", "assets");
+    return path.join(dataDirectory, `${data}.json`);
+}
+
 export function updateDataJson<T>(data: string, mapCallback: (obj: T, index: number) => T, filterCallback?: (obj: T, index: number) => boolean) {
-    const filePath = path.join(process.cwd(), 'src', 'assets', `${data}.json`);
+    const filePath = getDataFilePath(data);
     const raw = fs.readFileSync(filePath, 'utf-8');
     const objs: T[] = JSON.parse(raw);
 
@@ -16,13 +21,13 @@ export function updateDataJson<T>(data: string, mapCallback: (obj: T, index: num
 }
 
 export function getDataJson<T>(data: string): T {
-    const filePath = path.join(process.cwd(), 'src', 'assets', `${data}.json`);
+    const filePath = getDataFilePath(data);
     const raw = fs.readFileSync(filePath, 'utf-8');
     return JSON.parse(raw);
 }
 
 export function appendDataJson<T>(data: string, obj: T) {
-    const filePath = path.join(process.cwd(), 'src', 'assets', `${data}.json`);
+    const filePath = getDataFilePath(data);
     const raw = fs.readFileSync(filePath, 'utf-8');
     const objs: T[] = JSON.parse(raw);
 
